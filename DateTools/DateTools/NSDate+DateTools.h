@@ -21,8 +21,7 @@
 // CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 #ifndef DateToolsLocalizedStrings
-#define DateToolsLocalizedStrings(key) \
-NSLocalizedStringFromTableInBundle(key, @"DateTools", [NSBundle bundleWithPath:[[[NSBundle bundleForClass:[DTError class]] resourcePath] stringByAppendingPathComponent:@"DateTools.bundle"]], nil)
+#define DateToolsLocalizedStrings(key) DateToolsLocalizedString(key)
 #endif
 
 #import <Foundation/Foundation.h>
@@ -184,4 +183,8 @@ NSLocalizedStringFromTableInBundle(key, @"DateTools", [NSBundle bundleWithPath:[
 #pragma mark - Helpers
 +(NSString *)defaultCalendarIdentifier;
 + (void)setDefaultCalendarIdentifier:(NSString *)identifier;
+
++(NSString *)defaultLanguage;
++ (void)setDefaultLanguage:(NSString *)language;
+
 @end

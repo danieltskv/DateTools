@@ -63,6 +63,15 @@ static const unsigned int allCalendarUnitFlags = NSCalendarUnitYear | NSCalendar
 static NSString *defaultCalendarIdentifier = nil;
 static NSCalendar *implicitCalendar = nil;
 
+static NSString *language = @"en";
+
+static NSString *DateToolsLocalizedString(NSString *key) {
+    NSBundle *bundle = [NSBundle bundleWithPath:[[[NSBundle bundleForClass:[DTError class]] resourcePath] stringByAppendingPathComponent:@"DateTools.bundle"]];
+    NSString *languagePath = [bundle pathForResource:language ofType:@"lproj"];
+    NSBundle *languageBundle = [NSBundle bundleWithPath:languagePath];
+    return NSLocalizedStringFromTableInBundle(key, @"DateTools", languageBundle, nil);
+}
+
 @implementation NSDate (DateTools)
 
 + (void)load {
@@ -292,7 +301,7 @@ static NSCalendar *implicitCalendar = nil;
     NSString *localeCode = [[[NSBundle mainBundle] preferredLocalizations] objectAtIndex:0];
     
     // Russian (ru) and Ukrainian (uk)
-    if([localeCode isEqualToString:@"ru-RU"] || [localeCode isEqualToString:@"uk"]) {
+    if ([localeCode isEqualToString:@"ru-RU"] || [localeCode isEqualToString:@"ru"] || [localeCode isEqualToString:@"uk"]) {
         int XY = (int)floor(value) % 100;
         int Y = (int)floor(value) % 10;
         
@@ -306,6 +315,12 @@ static NSCalendar *implicitCalendar = nil;
 
         if(Y == 1 && XY != 11) {
             return @"__";
+        }
+    }
+    // Hebrew (he)
+    else if ([localeCode isEqual:@"he"]) {
+        if (value == 2.0f) {
+            return @"_";
         }
     }
     

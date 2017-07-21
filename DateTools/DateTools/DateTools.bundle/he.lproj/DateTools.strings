@@ -2,13 +2,25 @@
 "%d days ago" = "לפני %d ימים";
 
 /* No comment provided by engineer. */
+"%d _days ago" = "שלשום";
+
+/* No comment provided by engineer. */
 "%d hours ago" = "לפני %d שעות";
+
+/* No comment provided by engineer. */
+"%d _hours ago" = "לפני שעתיים";
 
 /* No comment provided by engineer. */
 "%d minutes ago" = "לפני %d דקות";
 
 /* No comment provided by engineer. */
+"%d _minutes ago" = "לפני %d דקות";
+
+/* No comment provided by engineer. */
 "%d months ago" = "לפני %d חודשים";
+
+/* No comment provided by engineer. */
+"%d _months ago" = "לפני חודשיים";
 
 /* No comment provided by engineer. */
 "%d seconds ago" = "לפני %d שניות";
@@ -17,7 +29,13 @@
 "%d weeks ago" = "לפני %d שבועות";
 
 /* No comment provided by engineer. */
+"%d _weeks ago" = "לפני שבועיים";
+
+/* No comment provided by engineer. */
 "%d years ago" = "לפני %d שנים";
+
+/* No comment provided by engineer. */
+"%d _years ago" = "לפני שנתיים";
 
 /* No comment provided by engineer. */
 "A minute ago" = "לפני דקה";
@@ -29,13 +47,13 @@
 "Just now" = "ממש עכשיו";
 
 /* No comment provided by engineer. */
-"Last month" = "בחודש שעבר";
+"Last month" = "חודש שעבר";
 
 /* No comment provided by engineer. */
-"Last week" = "בשבוע שעבר";
+"Last week" = "שבוע שעבר";
 
 /* No comment provided by engineer. */
-"Last year" = "בשנה שעברה";
+"Last year" = "שנה שעברה";
 
 /* No comment provided by engineer. */
 "Yesterday" = "אתמול";

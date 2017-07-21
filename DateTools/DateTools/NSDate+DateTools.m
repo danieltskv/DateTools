@@ -1755,4 +1755,12 @@ static NSString *DateToolsLocalizedString(NSString *key) {
     return implicitCalendar;
 }
 
++ (NSString *)defaultLanguage {
+    return language;
+}
+
++ (void)setDefaultLanguage:(NSString *)defaultLanguage {
+    language = defaultLanguage;
+}
+
 @end

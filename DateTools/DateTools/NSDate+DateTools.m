@@ -298,10 +298,10 @@ static NSString *DateToolsLocalizedString(NSString *key) {
 }
 
 - (NSString *)getLocaleFormatUnderscoresWithValue:(double)value{
-    NSString *localeCode = [[[NSBundle mainBundle] preferredLocalizations] objectAtIndex:0];
+    NSString *localeCode = language;
     
     // Russian (ru) and Ukrainian (uk)
-    if ([localeCode isEqualToString:@"ru-RU"] || [localeCode isEqualToString:@"ru"] || [localeCode isEqualToString:@"uk"]) {
+    if ([localeCode isEqualToString:@"ru"] || [localeCode isEqualToString:@"uk"] || [localeCode isEqualToString:@"ru-RU"]) {
         int XY = (int)floor(value) % 100;
         int Y = (int)floor(value) % 10;
         
@@ -318,7 +318,7 @@ static NSString *DateToolsLocalizedString(NSString *key) {
         }
     }
     // Hebrew (he)
-    else if ([localeCode isEqual:@"he"]) {
+    else if ([localeCode isEqual:@"he"] || [localeCode isEqualToString:@"he-IL"]) {
         if (value == 2.0f) {
             return @"_";
         }

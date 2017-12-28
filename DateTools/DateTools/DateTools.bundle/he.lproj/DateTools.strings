@@ -26,6 +26,9 @@
 "%d seconds ago" = "לפני %d שניות";
 
 /* No comment provided by engineer. */
+"%d _seconds ago" = "לפני %d שניות";
+
+/* No comment provided by engineer. */
 "%d weeks ago" = "לפני %d שבועות";
 
 /* No comment provided by engineer. */
